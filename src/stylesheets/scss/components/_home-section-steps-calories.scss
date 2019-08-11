@@ -1,0 +1,18 @@
+.home-section-steps-calories {
+    @extend %flex;
+    width: 340px;
+    height: 93px;  
+    background: rgba($color-white, 0.25);
+    padding: 24px 30px 24px 20px;
+    margin-top: 15px;
+    @include roundedCorners(23px);
+    @include box-shadow(0px, 3px, 9px, 0, rgba(#000, 0.1));
+
+    .home-section-steps-calories-flex {
+        display: flex;
+    }
+
+    // h2 {
+    //     margin: 25px 0 0 56px;
+    // }
+}

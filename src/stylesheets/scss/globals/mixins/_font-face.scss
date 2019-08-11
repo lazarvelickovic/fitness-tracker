@@ -3,7 +3,6 @@
       font-family: $family;
       font-style: $style;
       font-weight: $weight;
-      src: url('../fonts/#{$file}.otf') format('opentype');
+      src: url('../fonts/#{$file}.woff') format('opentype');
     }
 }
-  

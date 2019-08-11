@@ -1,0 +1,16 @@
+.home-section-activity {
+    width: 340px;
+    height: 184px;  
+    background: rgba($color-white, 0.25);
+    padding: 25px 20px;
+    @include roundedCorners(23px);
+    @include box-shadow(0px, 3px, 9px, 0, rgba(#000, 0.1));
+
+    .home-section-activity-flex {
+        display: flex;
+    }
+
+    h2 {
+        margin: 25px 0 0 56px;
+    }
+}

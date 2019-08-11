@@ -30,15 +30,10 @@ $colors: (
 	'white-smoke': #F4F4F4,
 	'golden-tanoi': #ffcc66,
 
-	primary:  #3c3c3c,
-    primary-light: lighten(#3c3c3c, 40%),
-	primary-dark: darken(#3c3c3c, 40%),
-	secondary: #fff, 
-	secondary-light: lighten(#fff, 40%),
-	secondary-dark: darken(#fff, 40%),
-	third: #ada074,
-	third-light: lighten(#ada074, 20%),
-	third-dark: darken(#ada074, 40%),
+	primary:  #34C7A0,
+	secondary: #008AA2, 
+	third: #00B6A3,
+	fourth: #151C1F
 );
   
 $color-white:           #FFF;
@@ -46,7 +41,7 @@ $color-black:           #000;
   
 // Purpose Colors
 
-$base-font-color: color(primary);
+$base-font-color: $color-white;
 $action-color: #000;
 $hover-color: #fff;
 $base-background-color: $color-white;

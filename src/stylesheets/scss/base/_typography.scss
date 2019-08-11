@@ -1,11 +1,10 @@
 // Font Families 
-@include font-face(ResavskaBGSans-Italic, ResavskaBGSans-Italic);
-@include font-face(ResavskaBGSans-Bold, ResavskaBGSans-Bold);
+@include font-face(HelveticaNeueBold, HelveticaNeueBold);
+@include font-face(HelveticaNeueMedium, HelveticaNeueMedium);
 
-$base-font-family:     'Resavska BG Sans', sans;
-$secondary-font-family: Palatino Linotype, Palatino, serif;
+$base-font-family:     HelveticaNeueMedium;
 $body-font-family:      $base-font-family;
-$heading-font-family:   $body-font-family;
+$heading-font-family:   HelveticaNeueBold;
  
 // Font Sizes
 
@@ -14,7 +13,7 @@ $base-font-size: 15px;
 // Line height
 
 $base-line-height:    1;
-$heading-line-height: 1.2;
+$heading-line-height: 41px;
 
 // Body
 
@@ -26,78 +25,41 @@ body {
   -webkit-font-smoothing: subpixel-antialiased!important;
   font-weight: 400;
   height: 100%;
-  background: #010101;
 }
 
 // Headings
 
-h1, h2, h3 {
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  line-height: $heading-line-height;
-  text-align: center;
-}
-
 h1 {
-  color: color(fourth);
-  font-size: 19.5px;
+  font-family: $heading-font-family;
+  font-weight: 400;
+  letter-spacing: 0.48px;
+  line-height: $heading-line-height;
+  color: color(third);
+  font-size: 34px;
 }
 
 h2 {
-  font-size: 28.5px;
-  margin-top: $main-margin;
+  font-family: $heading-font-family;
+  font-weight: 400;
+  letter-spacing: 0.91px;
+  line-height: 46px;
+  font-size: 38px;
 }
 
 h3 {
-  font-size: 16px;
-  position: relative;
+  color: color(third);
+  font-family: $heading-font-family;
+  font-weight: 400;
+  letter-spacing: 0.96px;
+  line-height: 49px;
+  font-size: 40px;
+  text-align: center;
 }
 
-h4 {
-  font-size: 18px; 
-  margin: 50px 0 20px;
-}
-
-// Other elements
+// Other elements 
 
 p {
-  margin: 0 0 $small-spacing;
-  font-weight: 300;
-  letter-spacing: 1px;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.24px;
 }
-
-a {
-  text-decoration: none;
-  outline: none;
-  font-size: 15.5px;
-  @include transition(all, 0.2s, ease-in);
-}
-
-::selection {
-  background: color(third);
-  color:white;
-}
-
-::-moz-selection {
-  background: color(third);
-  color:white;
-}
-
-hr {
-  color: color(fourth-dark);
-  background-color: color(fourth-dark);
-  margin: auto;
-  margin-top: 30px;
-  height: 1px;
-  width: 137px;
-  border: 0;
-}
-
-img,
-picture {
-  margin: 0;
-  max-width: 100%;
-}
-
-
