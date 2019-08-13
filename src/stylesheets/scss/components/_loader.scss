@@ -1,0 +1,17 @@
+.loader {
+    width: 375px;
+    height: 812px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba($color-white, 0.7);
+    z-index: 99999;
+
+    .loader-item {
+        @include center();
+        img {
+            width: 60px;
+            height: auto;
+        }
+    }
+}

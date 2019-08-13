@@ -8,6 +8,7 @@ function HomeMainContent(props) {
       <HomeSectionActivity hours={props.hours} minutes={props.minutes} />
       <HomeSectionStepsCalories icon="directions_run" name="Steps" description="Total" result={props.steps} />
       <HomeSectionStepsCalories icon="whatshot" name="Calories" description="Total Burned" result={props.calories} />
+      <HomeSectionStepsCalories icon="gesture" name="Kilometers" description="Average" result={props.kilometers} />
     </main>
   );
 }

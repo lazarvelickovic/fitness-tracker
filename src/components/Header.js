@@ -1,28 +1,17 @@
 import React from 'react';
 
-function Header() {
+function Header(props) {
+  let home = props.home;
+
   return (
-    <header className="animation-slide-in">
+    <header className={home ? "animation-slide-in " : "header-day-details animation-slide-in"}>
+      {home ? null : <div className="arrow-left" onClick={props.func}><i className="material-icons">chevron_left</i></div>}  
       <div>
-        <h1>Welcome!</h1>
-        <p>Overview of your activity</p>
+        <h1>{home ? 'Welcome!': props.dateD}</h1>
+        <p>{home ? 'Overview of your activity': 'June '+ props.dateNum + ', 2019.'}</p>
       </div> 
-    </header>
+    </header>    
   );
 }
-
-// function Header() {
-//   return (
-//     <header className="header-day-details animation-slide-in">
-//       <div className="arrow-left">
-//         <i className="material-icons">chevron_left</i>
-//       </div>
-//       <div>
-//         <h1>Tuesday</h1>
-//         <p>June 21, 2019.</p>
-//       </div>   
-//     </header>
-//   );
-// }
 
 export default Header;

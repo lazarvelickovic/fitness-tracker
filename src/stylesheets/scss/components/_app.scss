@@ -2,9 +2,8 @@
     width: 375px;
     height: 812px;
     position: relative;
-    @include center();
+    margin: auto;
     padding: 20px 18px 0;
     background: linear-gradient(152deg, color(primary) 17%, color(secondary) 100%);
     overflow: hidden;
-    // @include animation("fade-in 0.3s ease-out forwards");
 }

@@ -5,28 +5,9 @@
 // Animations
 
 @include keyframes(slide-in) {0%{left: -370px;} 100%{left: 0px;}}
-@include keyframes(fade-in) {0%{ opacity: 0; filter: alpha(opacity=0);} 100%{ opacity: 1; filter: alpha(opacity=100);}}
 
 .animation-slide-in {
     @include animation("slide-in 0.5s ease-out forwards");
-}
-
-
-// Preloader
-
-.preloader {
-    position: fixed;
-    background: white;
-    z-index: 99999;
-    @include animation("fade-out 0.5s 0.5s ease-in forwards");
-}
-
-.preloader .item {
-    position: absolute;
-    width: 120px;
-    height: 102px;
-    margin:-60px 0 0 -60px;
-    @include animation("fade-out-rotate 2s ease-in forwards");
 }
 
 p.home-main-normal {
