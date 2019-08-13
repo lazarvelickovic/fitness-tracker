@@ -7,7 +7,7 @@ import DayDetailsMainContent from './components/DayDetailsMainContent';
 import Loader from './components/Loader';
 
 function App() {
-
+  // Declaring state variables
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState(null);
   const [home, setHome] = useState(true);
@@ -18,6 +18,7 @@ function App() {
   const [dayCal, setDayCal] = useState(0);
   const [dayHours, setDayHours] = useState(0);
 
+  // Getting data from API
   useEffect(() => {
     fetch("https://api.myjson.com/bins/1gwnal")
         .then(response => response.json())
@@ -27,6 +28,7 @@ function App() {
         }) 
   }, []);
 
+  // Putting data for home page in varibles
   let steps = 0;
   if(data) {
     data.forEach(element => {
@@ -40,6 +42,7 @@ function App() {
   let stepsWithComma = steps.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   let dayStepsWithComma = daySteps.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
+  // Function that shows Day Details page
   function showDayDetails(e, dateNum, dateD, id, cname) {
     setHome(false);
     setDateNumber(dateNum);
@@ -52,6 +55,7 @@ function App() {
         }
       });
     }
+    // Putting data for day details page in state varibles
     setDaySteps(daySt);
     setDayKm((daySt * 0.762 / 1000).toFixed(1));
     setDayCal(Math.round(daySt * 0.05));
@@ -63,6 +67,7 @@ function App() {
     e.currentTarget.classList.add("active");
   }
   
+  // Function that set home state to true
   function showHome() {
     setHome(true);
     let elems = document.querySelectorAll(".day-button");

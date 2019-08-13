@@ -1,8 +1,7 @@
 .icon-container {
-    // margin: auto; ////////
     width: 40.98px;
     height: 40.98px;
-    background: rgba($color-white, 0.25); ///////
+    background: rgba($color-white, 0.25);
     background: rgba(color(third), 0.25);
     padding: 6.83px;
     @include roundedCorners(50%);
