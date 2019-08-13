@@ -1,5 +1,4 @@
-# fitness-tracker
-Fitness Tracker<br>
+# Fitness Tracker
 
 ## Built With
 
